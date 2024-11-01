@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-4 text-center animate__animated animate__fadeInDown">Our Services 🛠️</h1>
+    <p class="lead text-center animate__animated animate__fadeIn animate__delay-1s">Delivering innovative solutions to
+        elevate your brand.</p>
+
+    <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+                <img src="https://picsum.photos/400/300?random=1" class="card-img-top" alt="Web Development">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="card-text">Crafting responsive and user-friendly websites tailored to your business needs.
+                    </p>
+                    <a href="/contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-lg animate__animated animate__fadeInUp animate__delay-3s">
+                <img src="https://picsum.photos/400/300?random=2" class="card-img-top" alt="Digital Marketing">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Digital Marketing</h5>
+                    <p class="card-text">Developing strategies that increase visibility and drive traffic to your brand.
+                    </p>
+                    <a href="/contact" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-lg animate__animated animate__fadeInUp animate__delay-4s">
+                <img src="https://picsum.photos/400/300?random=3" class="card-img-top" alt="Branding">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Branding</h5>
+                    <p class="card-text">Creating unique brand identities that resonate with your audience.</p>
+                    <a href="/contact" class="btn btn-primary">Discover How</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <h2 class="col-12 animate__animated animate__fadeInUp">Additional Services 🌟</h2>
+        <div class="col-md-3 mt-4">
+            <div class="service-card text-center animate__animated animate__fadeInUp">
+                <img src="https://picsum.photos/200/200?random=4" alt="SEO Optimization"
+                    class="img-fluid rounded-circle mb-2">
+                <h5><i class="fas fa-chart-line"></i> SEO Optimization</h5>
+                <p>Improving search engine rankings to enhance online visibility.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mt-4">
+            <div class="service-card text-center animate__animated animate__fadeInUp">
+                <img src="https://picsum.photos/200/200?random=5" alt="Mobile App Development"
+                    class="img-fluid rounded-circle mb-2">
+                <h5><i class="fas fa-mobile-alt"></i> Mobile App Development</h5>
+                <p>Building intuitive mobile applications for iOS and Android platforms.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mt-4">
+            <div class="service-card text-center animate__animated animate__fadeInUp">
+                <img src="https://picsum.photos/200/200?random=6" alt="Maintenance & Support"
+                    class="img-fluid rounded-circle mb-2">
+                <h5><i class="fas fa-cogs"></i> Maintenance & Support</h5>
+                <p>Providing ongoing support and maintenance for all your digital products.</p>
+            </div>
+        </div>
+        <div class="col-md-3 mt-4">
+            <div class="service-card text-center animate__animated animate__fadeInUp">
+                <img src="https://picsum.photos/200/200?random=7" alt="Consulting"
+                    class="img-fluid rounded-circle mb-2">
+                <h5><i class="fas fa-comments"></i> Consulting</h5>
+                <p>Offering expert advice to help you navigate the digital landscape.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <h2 class="col-12 animate__animated animate__fadeInUp">Why Choose Us? 🤔</h2>
+        <div class="col-md-3 mt-4">
+            <i class="fas fa-check-circle fa-2x animate__animated animate__bounceIn"></i>
+            <h5>Experienced Team</h5>
+            <p>Our skilled professionals bring years of industry experience to every project.</p>
+        </div>
+        <div class="col-md-3 mt-4">
+            <i class="fas fa-clock fa-2x animate__animated animate__bounceIn"></i>
+            <h5>Timely Delivery</h5>
+            <p>We prioritize delivering projects on time without compromising on quality.</p>
+        </div>
+        <div class="col-md-3 mt-4">
+            <i class="fas fa-comments fa-2x animate__animated animate__bounceIn"></i>
+            <h5>Client-Centric Approach</h5>
+            <p>Your satisfaction is our top priority. We work closely with you at every step.</p>
+        </div>
+        <div class="col-md-3 mt-4">
+            <i class="fas fa-thumbs-up fa-2x animate__animated animate__bounceIn"></i>
+            <h5>Quality Assurance</h5>
+            <p>We ensure every deliverable meets the highest standards of quality.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12 text-center animate__animated animate__fadeInUp">
+            <h2>Get in Touch! 📞</h2>
+            <p>Ready to start your project? Contact us today!</p>
+            <a href="/contact" class="btn btn-success btn-lg">Contact Us</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-card {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 20px;
+        transition: transform 0.3s;
+        border: 1px solid #dee2e6;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card {
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h5 {
+        color: #343a40;
+        /* Darker color for headings */
+    }
+</style>
+
+{% endblock %}

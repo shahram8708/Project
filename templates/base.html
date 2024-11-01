@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QPS SOLUTIONS PRIVATE LIMITED</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <header class="bg-dark text-white py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <a href="tel:+919876543210" class="text-white mr-4"><i class="fas fa-phone"></i> +91 9876543210</a>
+                <a href="mailto:info@qps.com" class="text-white"><i class="fas fa-envelope"></i> info@qps.com</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Company Logo" style="height: 40px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="/portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center text-white" style="position: relative; overflow: hidden;">
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/1600/800?random={{ range(1, 100) | random }}');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(40%);
+            z-index: 1;
+        "></div>
+
+        <div style="position: relative; z-index: 2; padding: 4rem 2rem;">
+            <h1 class="display-4 animate__animated animate__fadeInDown">Welcome to QPS SOLUTIONS PRIVATE LIMITED 🌐</h1>
+            <p class="lead animate__animated animate__fadeIn animate__delay-1s">Innovative Solutions, Proven Results.
+            </p>
+            <a class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite" href="/services"
+                role="button">Explore Our Services</a>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center animate__animated animate__fadeInUp">Meet Our Team 👥</h2>
+        <div class="row mt-4 text-center">
+            {% for i in range(1, 5) %}
+            <div class="col-md-3 animate__animated animate__zoomIn">
+                <img src="https://picsum.photos/200/200?random={{ i }}" class="rounded-circle shadow-lg"
+                    alt="Team Member {{ i }}">
+                <h5 class="mt-2">Team Member {{ i }}</h5>
+                <p>Position Title</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="bg-light py-5 mt-5">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeInUp">Client Testimonials 💬</h2>
+            <div class="row mt-4">
+                <div class="col-md-4 animate__animated animate__fadeInLeft p-4 d-flex">
+                    <div class="card shadow-sm flex-fill">
+                        <div class="card-body">
+                            <p>"Exceptional service and creativity. Our digital presence has transformed thanks to QPS
+                                SOLUTIONS PRIVATE LIMITED."</p>
+                            <footer class="blockquote-footer">Emma Watson, CEO at StarTech</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp p-4 d-flex">
+                    <div class="card shadow-sm flex-fill">
+                        <div class="card-body">
+                            <p>"QPS SOLUTIONS PRIVATE LIMITED delivers on time and exceeds expectations. A trusted
+                                partner in our growth journey."</p>
+                            <footer class="blockquote-footer">John Smith, Founder of GrowthHub</footer>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInRight p-4 d-flex">
+                    <div class="card shadow-sm flex-fill">
+                        <div class="card-body">
+                            <p>"Professional, innovative, inventive, and customer-focused. They truly care about our
+                                success."</p>
+                            <footer class="blockquote-footer">Sarah Johnson, Marketing Head, BizSolutions</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center py-5">
+        <h2 class="animate__animated animate__fadeIn mb-4">Our Clients 💼✨</h2>
+        <p class="lead animate__animated animate__fadeIn animate__delay-1s mb-5">We proudly collaborate with leading
+            brands across various industries. Here are some of our esteemed clients:</p>
+
+        <div class="row justify-content-center">
+            {% for i in range(1, 7) %}
+            <div class="col-md-3 col-sm-4 mb-4 animate__animated animate__zoomIn animate__delay-{{ i }}s">
+                <div class="client-logo-container shadow-lg p-4 bg-light rounded position-relative overflow-hidden">
+                    <img src="https://picsum.photos/150/150?random={{ i+5 }}" class="img-fluid"
+                        alt="Client Logo {{ i }}">
+                    <div class="overlay d-flex align-items-center justify-content-center">
+                        <h5 class="text-white">Client {{ i }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="mt-4">
+            <p class="text-muted">Join our list of successful partners and take your business to the next level! 🚀🤝
+            </p>
+        </div>
+    </div>
+
+    <style>
+        .client-logo-container {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .client-logo-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .client-logo-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h5 {
+            transition: transform 0.3s;
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        .client-logo-container:hover .overlay h5 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+
+    <div class="container mt-5">
+        <h2 class="text-center animate__animated animate__fadeInUp">Get in Touch 📞</h2>
+        <div class="row mt-4 text-center">
+            <div class="col-md-4 animate__animated animate__fadeInLeft">
+                <h4>Email Us</h4>
+                <p>contact@qps.com</p>
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+                <h4>Call Us</h4>
+                <p>+91 9876543210</p>
+            </div>
+            <div class="col-md-4 animate__animated animate__fadeInRight">
+                <h4>Visit Us</h4>
+                <p>Ahmedabad, Gujarat, India</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-white mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>QPS SOLUTIONS PRIVATE LIMITED is a full-service marketing agency delivering innovative solutions
+                        for brands.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 1234 Digital Drive, Suite 100, San Francisco, CA</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 9876543210</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@qps.com">info@qps.com</a></p>
+
+                    <div>
+                        <a href="https://instagram.com" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Our Location</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.9333683481!2d-122.40369298468228!3d37.78755567975753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064e903d85f%3A0xfb473e2b924a4c1f!2sGo+Digital+Go+Social!5e0!3m2!1sen!2sus!4v1608076814592!5m2!1sen!2sus"
+                        width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6 text-left">
+                    <p>&copy; 2024 QPS SOLUTIONS PRIVATE LIMITED. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="#" class="text-white mr-3">Privacy Policy</a>
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

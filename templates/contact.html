@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-4 text-center animate__animated animate__fadeInDown">Contact Us 📞</h1>
+    <p class="lead text-center animate__animated animate__fadeIn animate__delay-1s">We're here to help you! Fill out the
+        form below or reach us via the details provided.</p>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject of your inquiry" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..."
+                        required></textarea>
+                </div>
+                <button type="submit"
+                    class="btn btn-primary animate__animated animate__pulse animate__infinite">Submit</button>
+            </form>
+        </div>
+
+        <div class="col-md-6 text-center animate__animated animate__fadeIn animate__delay-2s p-4">
+            <img src="https://picsum.photos/400/300?random=1" class="img-fluid rounded" alt="Contact Image">
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <div class="col-md-4">
+            <h4><i class="fas fa-map-marker-alt"></i> Our Address</h4>
+            <p>Ahmedabad, Gujarat, India</p>
+        </div>
+        <div class="col-md-4">
+            <h4><i class="fas fa-phone"></i> Call Us</h4>
+            <p>+91 9876543210</p>
+        </div>
+        <div class="col-md-4">
+            <h4><i class="fas fa-envelope"></i> Email Us</h4>
+            <p>contact@qps.com</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <h2 class="animate__animated animate__fadeInUp">Connect with Us on Social Media! 🌐</h2>
+            <p class="lead">Follow us for updates and insights:</p>
+            <a href="#" class="btn btn-outline-primary m-1"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="btn btn-outline-info m-1"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="btn btn-outline-danger m-1"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="btn btn-outline-success m-1"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="row mt-4 text-center">
+        <div class="col">
+            <h2 class="animate__animated animate__fadeInUp">We're excited to hear from you! 🌟</h2>
+            <p class="lead">Feel free to reach out for any inquiries or collaborations.</p>
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <div class="col">
+            <h2 class="animate__animated animate__fadeInUp">Frequently Asked Questions (FAQs) ❓</h2>
+            <p class="lead">Check out our FAQs for quick answers.</p>
+            <a href="/faq" class="btn btn-warning">View FAQs</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn-outline-primary:hover,
+    .btn-outline-info:hover,
+    .btn-outline-danger:hover,
+    .btn-outline-success:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.1);
+    }
+</style>
+
+{% endblock %}

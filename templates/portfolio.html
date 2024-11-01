@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container text-center mt-5">
+    <h1 class="display-4 animate__animated animate__fadeInDown">Our Portfolio 🎨</h1>
+    <p class="lead animate__animated animate__fadeIn animate__delay-1s">Showcasing Our Creative Projects</p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        {% for i in range(1, 7) %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm animate__animated animate__fadeInUp">
+                <img src="https://picsum.photos/300/200?random={{ i }}" class="card-img-top" alt="Project {{ i }}">
+                <div class="card-body">
+                    <h5 class="card-title">Project {{ i }}</h5>
+                    <p class="card-text">This project showcases our ability to deliver exceptional results and
+                        innovative solutions tailored to our client's needs.</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Client:</strong> Client {{ i }}</li>
+                        <li><strong>Service:</strong> Service Type {{ i }}</li>
+                        <li><strong>Date:</strong> {{ date | format_date }}</li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center animate__animated animate__fadeIn">Featured Projects 🌟</h2>
+    <div class="row">
+        {% for i in range(7, 10) %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-lg animate__animated animate__bounceIn">
+                <img src="https://picsum.photos/300/200?random={{ i }}" class="card-img-top"
+                    alt="Featured Project {{ i }}">
+                <div class="card-body">
+                    <h5 class="card-title">Featured Project {{ i }}</h5>
+                    <p class="card-text">An overview of our standout project, demonstrating our creative approach and
+                        commitment to quality.</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Technologies Used:</strong> HTML, CSS, JavaScript</li>
+                        <li><strong>Duration:</strong> 3 Months</li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="#" class="btn btn-info">Learn More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container text-center my-5 animate__animated animate__fadeIn">
+    <h2>Ready to Start Your Project? 🚀</h2>
+    <p class="lead">Get in touch with us today to discuss how we can help you achieve your goals!</p>
+    <a href="/contact" class="btn btn-success btn-lg animate__animated animate__pulse animate__infinite">Contact Us</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-4 text-center animate__animated animate__fadeInDown">Frequently Asked Questions ❓</h1>
+    <p class="lead text-center animate__animated animate__fadeIn animate__delay-1s">Find answers to the most common
+        questions about our services.</p>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="accordion" id="faqAccordion">
+                <div class="card animate__animated animate__fadeInLeft animate__delay-1s">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                What services do you offer?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We offer a wide range of services including web development, digital marketing, branding,
+                            and mobile app development tailored to your needs.
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/200/200?random=1" class="img-fluid rounded mx-auto d-block mt-2"
+                        alt="Service Image">
+                </div>
+
+                <div class="card animate__animated animate__fadeInLeft animate__delay-2s">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How can I contact you?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            You can reach us through our contact form, email us at <a
+                                href="mailto:contact@qps.com">contact@qps.com</a>, or call us at +91 9876543210.
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/200/200?random=2" class="img-fluid rounded mx-auto d-block mt-2"
+                        alt="Contact Image">
+                </div>
+
+                <div class="card animate__animated animate__fadeInLeft animate__delay-3s">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What is your pricing structure?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Our pricing varies depending on the service and project requirements. We offer customized
+                            quotes based on your specific needs.
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/200/200?random=3" class="img-fluid rounded mx-auto d-block mt-2"
+                        alt="Pricing Image">
+                </div>
+
+                <div class="card animate__animated animate__fadeInLeft animate__delay-4s">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How long does it take to complete a project?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            The duration of a project depends on its complexity and scope. We provide estimated
+                            timelines during the initial consultation.
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/200/200?random=4" class="img-fluid rounded mx-auto d-block mt-2"
+                        alt="Timeline Image">
+                </div>
+
+                <div class="card animate__animated animate__fadeInLeft animate__delay-5s">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Do you provide ongoing support after project completion?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes, we offer maintenance and support services to ensure your project runs smoothly after
+                            completion.
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/200/200?random=5" class="img-fluid rounded mx-auto d-block mt-2"
+                        alt="Support Image">
+                </div>
+
+                <div class="card animate__animated animate__fadeInLeft animate__delay-6s">
+                    <div class="card-header" id="headingSix">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                What is your refund policy?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We have a customer-friendly refund policy. Please refer to our terms and conditions for more
+                            details.
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/200/200?random=6" class="img-fluid rounded mx-auto d-block mt-2"
+                        alt="Refund Policy Image">
+                </div>
+
+                <div class="card animate__animated animate__fadeInLeft animate__delay-7s">
+                    <div class="card-header" id="headingSeven">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Can I see some of your past work?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Absolutely! You can view our portfolio showcasing a variety of projects on our website.
+                        </div>
+                    </div>
+                    <img src="https://picsum.photos/200/200?random=7" class="img-fluid rounded mx-auto d-block mt-2"
+                        alt="Portfolio Image">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 text-center animate__animated animate__fadeInRight p-4">
+            <img src="https://picsum.photos/400/300?random=8" class="img-fluid rounded" alt="FAQ Header Image">
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <div class="col">
+            <h2 class="animate__animated animate__fadeInUp">Still have questions? 🤔</h2>
+            <p class="lead">Feel free to <a href="/contact" class="btn btn-primary">Contact Us</a> for more information.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
